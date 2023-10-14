@@ -1,6 +1,6 @@
 import { Button, HStack, View } from "native-base";
 import React, { useState } from "react";
-import { Text } from "react-native";
+import { Text, Vibration } from "react-native";
 import { StyleSheet } from "react-native";
 
 export default function CounterPage() {
@@ -8,10 +8,12 @@ export default function CounterPage() {
 
   const increaseHandeler = () => {
     setCounter(counter + 1);
+    Vibration.vibrate(100)
   };
 
   const decreaseHandeler = () => {
     setCounter(counter - 1);
+    Vibration.vibrate(100)
   };
 
   return (
@@ -21,6 +23,7 @@ export default function CounterPage() {
         <HStack space={3}>
           <Button onPress={increaseHandeler}>Increase</Button>
           <Button onPress={decreaseHandeler}>Decrease</Button>
+          <Button onPress={()=>{setCounter(0)}}>Reset</Button>
         </HStack>
       </View>
     </View>

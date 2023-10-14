@@ -1,17 +1,17 @@
 import { Button, HStack, View } from "native-base";
-import React from "react";
+import React, { useState } from "react";
 import { Text } from "react-native";
 import { StyleSheet } from "react-native";
 
 export default function CounterPage() {
-  let counter = 0;
+  const [counter, setCounter] = useState(0);
 
   const increaseHandeler = () => {
-    counter = counter + 1;
+    setCounter(counter + 1);
   };
 
   const decreaseHandeler = () => {
-    counter = counter - 1;
+    setCounter(counter - 1);
   };
 
   return (

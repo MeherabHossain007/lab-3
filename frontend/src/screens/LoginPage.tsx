@@ -1,7 +1,7 @@
 import React from 'react'
-
+import { Text} from 'native-base';
 export default function LoginPage() {
   return (
-    <div>LoginPage</div>
+    <Text>LoginPage</Text>
   )
 }

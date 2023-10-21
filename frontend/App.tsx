@@ -7,6 +7,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import LoginPage from "./src/screens/LoginPage";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import SettingsPage from "./src/screens/SettingsPage";
+import NationalizePage from "./src/screens/NationalizePage";
 
 const stack = createStackNavigator();
 
@@ -28,6 +29,7 @@ export default function App() {
         <bottom_tab.Navigator>
           <bottom_tab.Screen name="Dashboard" component={BasicDashboardScreen}/>
           <bottom_tab.Screen name="Settings" component={SettingsPage}/>
+          <bottom_tab.Screen name="Nationalize" component={NationalizePage}/>
         </bottom_tab.Navigator>
         {/* <stack.Navigator>
           <stack.Screen name="Home" component={Home}/>

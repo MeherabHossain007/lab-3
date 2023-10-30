@@ -7,7 +7,7 @@ export type IAuthContex = {
   setIsLogin: (isLoggedIn: boolean) => void;
 };
 
-const AuthContex = React.createContext<IAuthContex | null>(null);
+export const AuthContex = React.createContext<IAuthContex | null>(null);
 
 export default function AuthProvider(props: any) {
   const [userEmail, setEmail] = useState("");

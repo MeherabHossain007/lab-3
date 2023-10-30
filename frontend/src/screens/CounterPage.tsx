@@ -2,9 +2,12 @@ import { Button, HStack, VStack, View } from "native-base";
 import React, { useState } from "react";
 import { Text, Vibration } from "react-native";
 import { StyleSheet } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-const CounterPage= (props: any) => {
+const CounterPage = (props: any) => {
   const [counter, setCounter] = useState(0);
+
+  const navigation = useNavigation();
 
   const increaseHandeler = () => {
     setCounter(counter + 1);
@@ -17,7 +20,7 @@ const CounterPage= (props: any) => {
   };
 
   const navigationHandeler = () => {
-   props.navigation.navigate("Login");
+    navigation.navigate('Login');
   };
 
   return (
@@ -41,7 +44,7 @@ const CounterPage= (props: any) => {
       </View>
     </View>
   );
-}
+};
 
 const style = StyleSheet.create({
   mainContainer: {
